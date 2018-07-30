@@ -1,0 +1,67 @@
+<div class="container">
+
+    <div id="nav-bar">
+        <a href="#!home"> <button class="nav-button"> Home </button></a>
+        <a href="#!empDetails"> <button class="nav-button"> Employee Details  </button></a>
+        <a href="#!empList"> <button class="nav-button"> Employee List  </button></a>
+        <a href="#!login"> <button class="nav-button"> Log-in </button></a>
+    </div>
+
+
+    <div>{{msg}}</div>
+    <div>{{smsg}}</div>
+
+    <div class="wrapper-content-detailView">
+        <br>
+        <div class="">
+
+            <h4> Employee Details</h4>
+
+        </div>
+
+        <div id="wrapper-form" class="row panel panel-default" >
+
+            <fieldset id="form" class="form-group">
+
+
+                ID:
+                <input type="number" data-ng-model="newEmployee_id"> <br>
+
+                Gender:
+                <input type="radio" data-ng-model="newEmployee_gender" value="F">Female
+                <input type="radio" data-ng-model="newEmployee_gender" value="M">Male
+                {{}}
+                <br>
+                First Name:
+                <input type="text" data-ng-model="newEmployee_firstname"><br>
+
+                Last Name:
+                <input type="text" data-ng-model="newEmployee_lastname">
+                <br>
+                E-mail:
+                <input type="email" data-ng-model="newEmployee_email">
+                <br>
+                City:
+                <input type="text" data-ng-model="newEmployee_city">
+                <br>
+                Age:
+                <input type="number" data-ng-model="newEmployee_age">
+
+                <br>
+                <button id="btn-addemp" ng-show="!visibility_flag"  data-ng-click="addEmployee()" class="btn mybtn-primary  btn-submit">Add Employee</button>
+                <button id="btn-saveChanges" ng-show="visibility_flag" data-ng-click="saveChanges()" class="btn mybtn-primary btn-submit">Save Changes</button>
+
+                <p>{{crr_emp}}</p>
+            </fieldset>
+
+
+
+        </div>
+
+        <div  ng-controller = "child_ctrl">
+            <input type="text" ng-model="child_input_age">
+            <button ng-click="childToPar(child_input_age)">Click me!</button>
+        </div>
+    </div>
+
+</div>

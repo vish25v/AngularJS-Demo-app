@@ -1,0 +1,12 @@
+
+[{"id":1,"gender":"M","firstname":"Phillip","lastname":" Reyes","email":"preyes0@imdb.com","city":"Austin","age":25},
+{"id":2,"gender":"F","firstname":"Debra","lastname":"Murray","email":"dmurray1@ft.com","city":"Sheksna","age":30},
+{"id":3,"gender":"M","firstname":"Keith","lastname":"Woods","email":"kwoods2@soundcloud.com","city":"Kharagauli","age":35},
+{"id":4,"gender":"M","firstname":"Jimmy","lastname":"Oliver","email":"joliver3@unc.edu","city":"Foxrock","age":20},
+{"id":5,"gender":"F","firstname":"Deborah","lastname":"Nichols","email":"dnichols4@ox.ac.uk","city":"Kāmyārān","age":24},
+{"id":6,"gender":"F","firstname":"Sara","lastname":"Lynch","email":"slynch5@example.com","city":"At Tall al Kabīr","age":25},
+{"id":7,"gender":"F","firstname":"Lisa","lastname":"Campbell","email":"lcampbell6@list-manage.com","city":"Guararapes","age":28},
+{"id":8,"gender":"F","firstname":"Deborah","lastname":"Allen","email":"dallen7@bizjournals.com","city":"Yixing","age":32},
+{"id":9,"gender":"F","firstname":"Bonnie","lastname":"Hamilton","email":"bhamilton8@mtv.com","city":"Sagopshi","age":30},
+{"id":10,"gender":"M","firstname":"Donald","lastname":"Richards","email":"drichards9@upenn.edu","city":"Baishuiyang","age":24}]
+

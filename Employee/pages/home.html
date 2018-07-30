@@ -1,0 +1,33 @@
+<div id="nav-bar">
+    <a href="#!home"> <button class="nav-button"> Home </button></a>
+    <a href="#!empDetails"> <button class="nav-button"> Employee Details  </button></a>
+    <a href="#!empList"> <button class="nav-button"> Employee List  </button></a>
+    <a href="#!login"> <button class="nav-button"> Log-in </button></a>
+
+
+</div>
+<div>{{msg}}</div>
+<div>{{smsg}}</div>
+<div class="container-inner">
+
+    <div class="container slider">
+
+        <!-- Enumerate all pics-->
+        <img ng-repeat="photo in photos" class="slide" ng-swipe-right = "showPrev()" ng-swipe-left="showNext()"
+             ng-show="isActive($index)" ng-src="{{photo.src}}"/>
+
+        <!-- prev/next controls -->
+
+        <button class="arrow prev"  ng-click="showPrev()"> <img id="next-img" src="../images/next.png"></button>
+        <button class="arrow next"  ng-click="showNext()"> <img id="prev-img" src="../images/prev.png"></button>
+        <!-- Extra nav controls -->
+
+        <ul class="nav">
+            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+                <img src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}"
+                     ng-click="showPhoto($index);"/>
+            </li>
+        </ul>
+    </div>
+
+</div>

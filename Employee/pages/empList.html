@@ -1,0 +1,55 @@
+<div class="container">
+
+    <div id="nav-bar">
+        <a href="#!home"> <button class="nav-button"> Home </button></a>
+        <a href="#!empDetails"> <button class="nav-button"data-ng-click="add_new_record()" > Employee Details  </button></a>
+        <a href="#!empList"> <button class="nav-button"> Employee List  </button></a>
+        <a href="#!login"> <button class="nav-button"> Log-in </button></a>
+
+
+    </div>
+    <div>{{msg}}</div>
+    <div>{{smsg}}</div>
+    <div class="wrapper-content-listview">
+        <div class="row">
+
+            <h4> List of Current Employees </h4>
+
+        </div>
+        <div class="row table-header" >
+            <a href="#!empDetails"><button id="add-new-emp" class="btn mybtn-primary" data-ng-click="add_new_record()">Add New Employee</button></a>
+        </div>
+        <div id="wrapper-table" class="row" >
+            <div class="col-sm-4"><h1></h1></div>
+
+            <div class="scrollable">
+                <table id="table" class="table table-striped table-bordered" >
+                    <tr class="thead">
+                        <th ng-click="orderByField='id'; reverseSort = !reverseSort" >ID</th>
+                        <th ng-click="orderByField='gender'; reverseSort = !reverseSort">Gender</th>
+                        <th ng-click="orderByField='firstname'; reverseSort = !reverseSort">First Name</th>
+                        <th ng-click="orderByField='lastname'; reverseSort = !reverseSort">Last Name</th>
+                        <th ng-click="orderByField='age'; reverseSort = !reverseSort">Age</th>
+                        <th ng-click="orderByField='email'; reverseSort = !reverseSort">E-mail</th>
+                        <th ng-click="orderByField='city'; reverseSort = !reverseSort">City</th>
+                        <th>EDIT</th>
+                        <th>DELETE</th>
+
+                    </tr>
+                    <tr ng-repeat="x in jsondata |orderBy:orderByField:reverseSort">
+                        <td><span>{{ x.id }}</span></td>
+                        <td><span>{{ x.gender }}</span></td>
+                        <td ><span>{{ x.firstname }}</span></td>
+                        <td><span>{{ x.lastname }}</span></td>
+                        <td><span>{{ x.age }}</span></td>
+                        <td><span>{{ x.email }}</span></td>
+                        <td><span>{{ x.city }}</span></td>
+                        <th><a href="#!empDetails"><button class="btn-ic" ng-click="edit_record(x)"> <img  class= "icons" src="../images/ic_edit_white.png"></button ></a></th>
+                        <th><button class="btn-ic" ng-click="delete_record(x)"> <img  class= "icons" src="../images/ic_delete_white.png"></button ></th>
+
+                    </tr>
+                </table>
+            </div> <!--end of scrollable div -->
+        </div><!--end of wrapper-table -->
+    </div><!-- end of wrapper-content-listview -->
+</div>
